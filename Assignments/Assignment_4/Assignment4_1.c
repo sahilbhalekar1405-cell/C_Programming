@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void CheckNumber(int iNo)
+{
+    if (iNo < 0)
+    {
+        printf("Negative Number");
+    }
+    else if (iNo > 0)
+    {
+        printf("Positive Number");
+    }
+    else
+    {
+        printf("Zero");
+    }
+}
+
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter number : \n");
+    scanf("%d", &iValue);
+
+    CheckNumber(iValue);
+
+    return EXIT_SUCCESS;
+}
