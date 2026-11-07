@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int RangeSumEven(int iNo1, int iNo2)
+{
+    int iCnt = 0;
+    int iSum = 0;
+
+    if ((iNo1 > iNo2) || ((iNo1 < 0) || (iNo2 < 0)))
+    {
+        printf("Invalid Input\n");
+        return 0;
+    }
+
+    for (iCnt = iNo1; iCnt <= iNo2; iCnt++)
+    {
+        if ((iCnt % 2) == 0)
+        {
+            iSum = iCnt + iSum;
+        }
+    }
+
+    return iSum;
+}
+
+int main()
+{
+    int iValue1 = 0, iValue2 = 0, iRet = 0;
+
+    printf("Enter first number : \n");
+    scanf("%d", &iValue1);
+
+    printf("Enter last number : \n");
+    scanf("%d", &iValue2);
+
+    iRet = RangeSumEven(iValue1, iValue2);
+
+    if (iRet == 0)
+    {
+        return EXIT_SUCCESS;
+    }
+
+    printf("Addition of range : %d\n", iRet);
+
+    return EXIT_SUCCESS;
+}
